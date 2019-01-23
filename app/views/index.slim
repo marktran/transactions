@@ -15,7 +15,7 @@
             td.pv2.ph3= transaction.date
             td.pv2.ph3= transaction.description
             td.pv2.ph3 #{'$%.2f' % transaction.amount}
-            td.pv2.ph3= transaction.pending
+            td.pv2.ph3= transaction.recurring
       - else
         tr
           td.tc.pv3 colspan='3'
