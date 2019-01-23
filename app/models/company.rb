@@ -12,7 +12,7 @@ class Company < Sequel::Model
   end
 
   def enrich
-    # Cache enrichment data for at least 7 days
+    # Cache enriched data for at least 7 days
     last_enrichment_in_days = (Time.now.to_i - enriched_at.to_i) / (24 * 60 * 60)
     return false if enriched_at && last_enrichment_in_days < 7
 
