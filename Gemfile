@@ -21,6 +21,7 @@ end
 group :test do
   gem 'database_cleaner', github: 'DatabaseCleaner/database_cleaner'
   gem 'minitest'
+  gem 'rack-test'
   gem 'vcr'
   gem 'webmock'
 end

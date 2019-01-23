@@ -79,6 +79,7 @@ DEPENDENCIES
   foreman
   minitest
   plaid
+  rack-test
   racksh
   require_all
   sequel
