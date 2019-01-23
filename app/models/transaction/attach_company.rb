@@ -14,7 +14,8 @@ class Transaction::AttachCompany
   def call
     return unless domain
 
-    company = Company.find_or_create(domain: domain).enrich
+    company = Company.find_or_create(domain: domain)
+    Company::Enrich.for(company).call
     transaction.update(company: company)
   end
 
