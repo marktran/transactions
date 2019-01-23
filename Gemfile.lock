@@ -41,6 +41,7 @@ GEM
     racksh (1.0.0)
       rack (>= 1.0)
       rack-test (>= 0.5)
+    rake (12.3.2)
     require_all (2.0.0)
     safe_yaml (1.0.4)
     sequel (5.16.0)
@@ -81,6 +82,7 @@ DEPENDENCIES
   plaid
   rack-test
   racksh
+  rake
   require_all
   sequel
   sinatra
