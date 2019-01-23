@@ -2,7 +2,7 @@
 
 class RootController < ApplicationController
   get '/' do
-    @transactions = Transaction.all
+    @transactions = Transaction.order(Sequel.desc(:date)).all
     slim :index
   end
 end
