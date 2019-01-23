@@ -14,7 +14,7 @@ This app fetches [test] transactions from Plaid's sandbox environment, enriches 
 1. `cp .env.example .env` then fill in vars in `.env`
 2. `env RACK_ENV=development rake db:migrate`
 3. `bundle exec foreman start`
-4. https://localhost:9292
+4. http://localhost:9292
 
 ## Testing
 1. `env RACK_ENV=test rake db:migrate`
