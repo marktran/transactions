@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Plaid::Import < Plaid::Base
+class Plaid::ImportTransactions < Plaid::Base
   attr_reader :access_token, :transactions
 
   DAYS_TO_IMPORT = 90
@@ -15,12 +15,12 @@ class Plaid::Import < Plaid::Base
   end
 
   def call
-    pull_transactions
-    import_transactions
+    fetch_data
+    import_data
     attach_companies
   end
 
-  def pull_transactions
+  def fetch_data
     now = Date.today
 
     @plaid_transactions = client.transactions.get(
@@ -30,7 +30,7 @@ class Plaid::Import < Plaid::Base
     ).transactions
   end
 
-  def import_transactions
+  def import_data
     @plaid_transactions.each do |t|
       transaction = Transaction.create(
         date: t.date,
