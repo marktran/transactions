@@ -1,0 +1,4723 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.plaid.com/transactions/get
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"access-sandbox-1fba8b33-ceff-4374-8c9f-f4d10476277e","start_date":"2018-10-25","end_date":"2019-01-23","options":{},"client_id":"5c4509b8005af00012ac9908","secret":"fdf31a956ab2904fd4b949197bfc1a"}'
+    headers:
+      User-Agent:
+      - Plaid Ruby v6.2.0
+      Content-Type:
+      - application/json
+      Plaid-Version:
+      - '2018-05-22'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 23 Jan 2019 05:54:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Plaid-Version:
+      - '2018-05-22'
+      Vary:
+      - Accept-Encoding
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "accounts": [
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "balances": {
+                "available": 100,
+                "current": 110,
+                "iso_currency_code": "USD",
+                "limit": null,
+                "unofficial_currency_code": null
+              },
+              "mask": "0000",
+              "name": "Plaid Checking",
+              "official_name": "Plaid Gold Standard 0% Interest Checking",
+              "subtype": "checking",
+              "type": "depository"
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "balances": {
+                "available": 200,
+                "current": 210,
+                "iso_currency_code": "USD",
+                "limit": null,
+                "unofficial_currency_code": null
+              },
+              "mask": "1111",
+              "name": "Plaid Saving",
+              "official_name": "Plaid Silver Standard 0.1% Interest Saving",
+              "subtype": "savings",
+              "type": "depository"
+            },
+            {
+              "account_id": "gxv5bNgGQeCmbzZxgzZyS4QgKMkNnPigbJnbj",
+              "balances": {
+                "available": null,
+                "current": 1000,
+                "iso_currency_code": "USD",
+                "limit": null,
+                "unofficial_currency_code": null
+              },
+              "mask": "2222",
+              "name": "Plaid CD",
+              "official_name": "Plaid Bronze Standard 0.2% Interest CD",
+              "subtype": "cd",
+              "type": "depository"
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "balances": {
+                "available": null,
+                "current": 410,
+                "iso_currency_code": "USD",
+                "limit": 2000,
+                "unofficial_currency_code": null
+              },
+              "mask": "3333",
+              "name": "Plaid Credit Card",
+              "official_name": "Plaid Diamond 12.5% APR Interest Credit Card",
+              "subtype": "credit card",
+              "type": "credit"
+            },
+            {
+              "account_id": "WWK5Rpx7lEF7vnN93nN8IMekQJavG3ulrV1r6",
+              "balances": {
+                "available": 43200,
+                "current": 43200,
+                "iso_currency_code": "USD",
+                "limit": null,
+                "unofficial_currency_code": null
+              },
+              "mask": "4444",
+              "name": "Plaid Money Market",
+              "official_name": "Plaid Platinum Standard 1.85% Interest Money Market",
+              "subtype": "money market",
+              "type": "depository"
+            }
+          ],
+          "item": {
+            "available_products": [
+              "assets",
+              "auth",
+              "balance",
+              "credit_details",
+              "identity",
+              "income"
+            ],
+            "billed_products": [
+              "transactions"
+            ],
+            "error": null,
+            "institution_id": "ins_3",
+            "item_id": "qZNxRq3GWECG6DVRzDVATN7gAp6vX6udRkRJx",
+            "webhook": ""
+          },
+          "request_id": "5F0TsVEWapojqF4",
+          "total_transactions": 48,
+          "transactions": [
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": 25,
+              "category": [
+                "Payment",
+                "Credit Card"
+              ],
+              "category_id": "16001000",
+              "date": "2019-01-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CREDIT CARD 3333 PAYMENT *//",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "x8E7rRjG93CgynRKAnRGsJpmQrqA83inobV18",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 5.4,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2019-01-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 063015 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "4WMorpRzBQFg9eazqeadsBy7nLGq6RFdePAo7",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "WWK5Rpx7lEF7vnN93nN8IMekQJavG3ulrV1r6",
+              "account_owner": null,
+              "amount": 5850,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2019-01-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "ACH Electronic CreditGUSTO PAY 123456",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": "ACH",
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "oexB5WzG8gUa1yeXMye9IkV1JxEXwdIRam7ja",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "gxv5bNgGQeCmbzZxgzZyS4QgKMkNnPigbJnbj",
+              "account_owner": null,
+              "amount": 1000,
+              "category": [
+                "Transfer",
+                "Deposit"
+              ],
+              "category_id": "21007000",
+              "date": "2019-01-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CD DEPOSIT .INITIAL.",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "aqo5ePZ84aUk4P8MjP8pT1a8bwmVQ5S7qMQNx",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 78.5,
+              "category": [
+                "Recreation",
+                "Gyms and Fitness Centers"
+              ],
+              "category_id": "17018000",
+              "date": "2019-01-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Touchstone Climbing",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "QL95J7qdv1Cklb3Myb3rTv4dbm7lXocpxV716",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": -500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2019-01-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "NZA5RMEBmQC36GrjmGrEsEgD6RwabZiWvw535",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 12,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2019-01-18",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": "3322",
+                "zip": null
+              },
+              "name": "McDonald's",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "P1m5bjlx9MsAV1Gk81GpHRrjVQga4dC7DRW1v",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 4.33,
+              "category": [
+                "Food and Drink",
+                "Restaurants",
+                "Coffee Shop"
+              ],
+              "category_id": "13005043",
+              "date": "2019-01-18",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Starbucks",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "j4wlbkW91MF6Pr8lJr81tZ8P3RDevEi15eLEa",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 89.4,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2019-01-17",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "SparkFun",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "7n8EpLKxd1FedzwjWzwoSmkRvKyAdrugWqnZB",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": -4.22,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2019-01-16",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "INTRST PYMNT",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "dzG5wNLkjPuMeNJQqNJKTDpyaJ1XNMCZwpQkm",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2019-01-06",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Znd5qp4ZrKFgPre7Mrepsr1bXGJ5mLfg5BX3q",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 6.33,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2019-01-04",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 072515 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "eBb5vypG7jFXa64gK64lH76DjMZbx3SLNG5gv",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2019-01-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Tectra Inc",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "MQE57R8zbeiKDdmlxdmzSKjNDGrAMxs9BrPKg",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 2078.5,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2018-12-31",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "AUTOMATIC PAYMENT - THANK",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "pQa35lByE8ivD1jpN1jgIEBm9aWpDZiL4dVw1",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-31",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "KFC",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Leg5VQkrn7UA9aeQvaeXHyRP9j5rq8CPb5p7J",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Shops",
+                "Sporting Goods"
+              ],
+              "category_id": "19046000",
+              "date": "2018-12-31",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Madison Bicycle Shop",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "1gP1lLRqKjcVk39Zn396TdEB1ZL3zjC5g1ez8",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": 25,
+              "category": [
+                "Payment",
+                "Credit Card"
+              ],
+              "category_id": "16001000",
+              "date": "2018-12-22",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CREDIT CARD 3333 PAYMENT *//",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "wkgjKxPGyBCzmdKX4dKZcqo15zyRzncrG6Zoz",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 5.4,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2018-12-22",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 063015 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "qZNxRq3GWECG6DVRzDVATN7JKnvRnBidEqrl9",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "WWK5Rpx7lEF7vnN93nN8IMekQJavG3ulrV1r6",
+              "account_owner": null,
+              "amount": 5850,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2018-12-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "ACH Electronic CreditGUSTO PAY 123456",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": "ACH",
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Znd5qp4ZrKFgPre7Mrepsr1b7JKDJgcg3jqyb",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "gxv5bNgGQeCmbzZxgzZyS4QgKMkNnPigbJnbj",
+              "account_owner": null,
+              "amount": 1000,
+              "category": [
+                "Transfer",
+                "Deposit"
+              ],
+              "category_id": "21007000",
+              "date": "2018-12-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CD DEPOSIT .INITIAL.",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Leg5VQkrn7UA9aeQvaeXHyRPQ5NJ5diP7Jjpq",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 78.5,
+              "category": [
+                "Recreation",
+                "Gyms and Fitness Centers"
+              ],
+              "category_id": "17018000",
+              "date": "2018-12-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Touchstone Climbing",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "XAz58Qdeqluwn6rWq6r8TkKmWzA7zwudQRKAL",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": -500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2018-12-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "lPqKZJkGpLun7wepNwegtEJx38z981IZ4voBb",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 12,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": "3322",
+                "zip": null
+              },
+              "name": "McDonald's",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Jj15EQpqAPCwBjz4QjzmTMRV4PqKP3sdAL6ez",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 4.33,
+              "category": [
+                "Food and Drink",
+                "Restaurants",
+                "Coffee Shop"
+              ],
+              "category_id": "13005043",
+              "date": "2018-12-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Starbucks",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "kNJqypl6L1F4pD8Z7D8duykJ5NLRN4iW9b61P",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 89.4,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-18",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "SparkFun",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "5ALgoJlB3Zuyg63ZK63mSNrak1Wp1BiZvDKQq",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": -4.22,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-17",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "INTRST PYMNT",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "VEl5Ww3jV8CBx4bm94bgFjN6mezyeMCWaJgPZ",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2018-12-07",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "6Go8gLq3xMt4rwxqvwxluvQa5PzrPeig6RD73",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 6.33,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2018-12-05",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 072515 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "wkgjKxPGyBCzmdKX4dKZcqo15zyRzncrG6Z14",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-02",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Tectra Inc",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "RpR58ZKakLCDamxlEmxpSnGylDkLD7iR9QpVb",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 2078.5,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2018-12-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "AUTOMATIC PAYMENT - THANK",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "vopPq3Nwmziqko9BZo9yTn81Qm4BmWiWpD6QA",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-12-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "KFC",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "9mGA85za4pHDw3LQp3LeS5Xb86PM6kFRrmxNw",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Shops",
+                "Sporting Goods"
+              ],
+              "category_id": "19046000",
+              "date": "2018-12-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Madison Bicycle Shop",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "yEAeVD7XvxC5qLdkMLd7HbjEw1pm1KtyGQ6Rl",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": 25,
+              "category": [
+                "Payment",
+                "Credit Card"
+              ],
+              "category_id": "16001000",
+              "date": "2018-11-22",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CREDIT CARD 3333 PAYMENT *//",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Dkx584eLp3C1BpjwRpjVsQdmwM1qMlSv18WaJ",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 5.4,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2018-11-22",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 063015 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "VEl5Ww3jV8CBx4bm94bgFjN6mezyeMCWaJgZL",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "WWK5Rpx7lEF7vnN93nN8IMekQJavG3ulrV1r6",
+              "account_owner": null,
+              "amount": 5850,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2018-11-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "ACH Electronic CreditGUSTO PAY 123456",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": "ACH",
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "QL95J7qdv1Cklb3Myb3rTv4dM7Pk7jip1dmQ3",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "gxv5bNgGQeCmbzZxgzZyS4QgKMkNnPigbJnbj",
+              "account_owner": null,
+              "amount": 1000,
+              "category": [
+                "Transfer",
+                "Deposit"
+              ],
+              "category_id": "21007000",
+              "date": "2018-11-21",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "CD DEPOSIT .INITIAL.",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "1gP1lLRqKjcVk39Zn396TdEBJLpyLrc5zwje3",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 78.5,
+              "category": [
+                "Recreation",
+                "Gyms and Fitness Centers"
+              ],
+              "category_id": "17018000",
+              "date": "2018-11-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Touchstone Climbing",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "mjrk5aKGopC7Xn893n8ZIMJbZeKgeWsLE5yZ6",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": -500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2018-11-20",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "Dkx584eLp3C1BpjwRpjVsQdmwM1qMlSv18WLp",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 12,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-11-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": "3322",
+                "zip": null
+              },
+              "name": "McDonald's",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "6Go8gLq3xMt4rwxqvwxluvQa5PzrPeig6RDPk",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 4.33,
+              "category": [
+                "Food and Drink",
+                "Restaurants",
+                "Coffee Shop"
+              ],
+              "category_id": "13005043",
+              "date": "2018-11-19",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Starbucks",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "XAz58Qdeqluwn6rWq6r8TkKmWzA7zwudQRKv8",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 89.4,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-11-18",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "SparkFun",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "RpR58ZKakLCDamxlEmxpSnGylDkLD7iR9QpoZ",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "oexB5WzG8gUa1yeXMye9IkVw7qnm65SRam7aB",
+              "account_owner": null,
+              "amount": -4.22,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-11-17",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "INTRST PYMNT",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "XAz58Qdeqluwn6rWq6r8TkKmWzA7zwudQRKnE",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Travel",
+                "Airlines and Aviation Services"
+              ],
+              "category_id": "22001000",
+              "date": "2018-11-07",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "United Airlines",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "bK8JxwMGN4hzb9pv69pZcNM8bp9kpziVlwbpa",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "8bWkpvrdaLCEnBq3aBqLIqN43gDPnAFwABLAx",
+              "account_owner": null,
+              "amount": 6.33,
+              "category": [
+                "Travel",
+                "Car Service",
+                "Ride Share"
+              ],
+              "category_id": "22006001",
+              "date": "2018-11-05",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Uber 072515 SF**POOL**",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "vopPq3Nwmziqko9BZo9yTn81Qm4BmWiWpD6Zg",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-11-02",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Tectra Inc",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "n7Bz5brGgoFEAjZmVjZXIKQyqw7Lwpi6oBlqz",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 2078.5,
+              "category": [
+                "Payment"
+              ],
+              "category_id": "16000000",
+              "date": "2018-11-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "AUTOMATIC PAYMENT - THANK",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "G4j5QRMg8aFwVGqBjGqzT5kmBdy1drF1a4MME",
+              "transaction_type": "special",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Food and Drink",
+                "Restaurants"
+              ],
+              "category_id": "13005000",
+              "date": "2018-11-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "KFC",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "AzqRn4PZMrub4v9R8v95tNd6nmaGmyi18vrrq",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            },
+            {
+              "account_id": "Eda59nQpoxuvVE9RpE97IxQ8M4dDWruXwNkwX",
+              "account_owner": null,
+              "amount": 500,
+              "category": [
+                "Shops",
+                "Sporting Goods"
+              ],
+              "category_id": "19046000",
+              "date": "2018-11-01",
+              "iso_currency_code": "USD",
+              "location": {
+                "address": null,
+                "city": null,
+                "lat": null,
+                "lon": null,
+                "state": null,
+                "store_number": null,
+                "zip": null
+              },
+              "name": "Madison Bicycle Shop",
+              "payment_meta": {
+                "by_order_of": null,
+                "payee": null,
+                "payer": null,
+                "payment_method": null,
+                "payment_processor": null,
+                "ppd_id": null,
+                "reason": null,
+                "reference_number": null
+              },
+              "pending": false,
+              "pending_transaction_id": null,
+              "transaction_id": "WWK5Rpx7lEF7vnN93nN8IMe59ZwrZ1slRGZZJ",
+              "transaction_type": "place",
+              "unofficial_currency_code": null
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:19 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CREDIT%20CARD%20PAYMENT%20*//
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:19 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:19 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=uber.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICIzZjVkNmE0ZS1jMjg0LTRmNzgtYmZkZi03NjY5YjQ1YWY5MDciLAogICJuYW1lIjogIlViZXIiLAogICJsZWdhbE5hbWUiOiAiVWJlciBUZWNobm9sb2dpZXMgSW5jLiIsCiAgImRvbWFpbiI6ICJ1YmVyLmNvbSIsCiAgImRvbWFpbkFsaWFzZXMiOiBbCiAgICAidWJlcm11ZXZlbWFkcmlkLmVzIiwKICAgICJ1YmVyZmFjdHVyYXMuY29tIiwKICAgICJzb2Npb3NtdHkuY29tIiwKICAgICJ1YmVyLWNlbnRyYWwuY29tIiwKICAgICJjb25kdWN0b3Jlc2JvZ290YS5pbmZvIiwKICAgICJlYXRzLm14IgogIF0sCiAgInNpdGUiOiB7CiAgICAicGhvbmVOdW1iZXJzIjogWwoKICAgIF0sCiAgICAiZW1haWxBZGRyZXNzZXMiOiBbCgogICAgXQogIH0sCiAgImNhdGVnb3J5IjogewogICAgInNlY3RvciI6ICJJbmR1c3RyaWFscyIsCiAgICAiaW5kdXN0cnlHcm91cCI6ICJUcmFuc3BvcnRhdGlvbiIsCiAgICAiaW5kdXN0cnkiOiAiVHJhbnNwb3J0YXRpb24iLAogICAgInN1YkluZHVzdHJ5IjogIlRyYW5zcG9ydGF0aW9uIiwKICAgICJzaWNDb2RlIjogIjg3IiwKICAgICJuYWljc0NvZGUiOiAiNTEiCiAgfSwKICAidGFncyI6IFsKICAgICJUcmFuc3BvcnRhdGlvbiIsCiAgICAiTW9iaWxlIiwKICAgICJCMkMiLAogICAgIlRlY2hub2xvZ3kiLAogICAgIk1hcmtldHBsYWNlIiwKICAgICJJbnRlcm5ldCIKICBdLAogICJkZXNjcmlwdGlvbiI6ICJUaGFua3MgZm9yIHZpc2l0aW5nIHRoZSBVYmVyIEZhY2Vib29rIHBhZ2UhIEJ5IHVzaW5nIG9yIGFjY2Vzc2luZyBvdXIgRmFjZWJvb2sgcGFnZSwgeW91IGFncmVlIHRvIGNvbXBseSB3aXRoIEZhY2Vib29rJ3MgU3RhdGVtZW50IG9mIFJpZ2h0cyBhbmQgUmVzcG9uc2liaWxpdGllcy4gQXMgYWx3YXlzLCB0aGUgY29udGVudCBwb3N0ZWQgYnkgZmFucyBvZiBVYmVyJ3MgRmFjZWJvb2sgcGFnZSBkb2VzIG5vdCByZWZsZWN0IFViZXLigJlzIHZpZS4uLiIsCiAgImZvdW5kZWRZZWFyIjogMjAwOSwKICAibG9jYXRpb24iOiAiMTQ1NSBNYXJrZXQgU3QsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAzLCBVU0EiLAogICJ0aW1lWm9uZSI6ICJBbWVyaWNhL0xvc19BbmdlbGVzIiwKICAidXRjT2Zmc2V0IjogLTgsCiAgImdlbyI6IHsKICAgICJzdHJlZXROdW1iZXIiOiAiMTQ1NSIsCiAgICAic3RyZWV0TmFtZSI6ICJNYXJrZXQgU3RyZWV0IiwKICAgICJzdWJQcmVtaXNlIjogbnVsbCwKICAgICJjaXR5IjogIlNhbiBGcmFuY2lzY28iLAogICAgInBvc3RhbENvZGUiOiAiOTQxMDMiLAogICAgInN0YXRlIjogIkNhbGlmb3JuaWEiLAogICAgInN0YXRlQ29kZSI6ICJDQSIsCiAgICAiY291bnRyeSI6ICJVbml0ZWQgU3RhdGVzIiwKICAgICJjb3VudHJ5Q29kZSI6ICJVUyIsCiAgICAibGF0IjogMzcuNzc1NzkxNCwKICAgICJsbmciOiAtMTIyLjQxODA1MjkKICB9LAogICJsb2dvIjogImh0dHBzOi8vbG9nby5jbGVhcmJpdC5jb20vdWJlci5jb20iLAogICJmYWNlYm9vayI6IHsKICAgICJoYW5kbGUiOiAidWJlciIsCiAgICAibGlrZXMiOiAxMzc5Mzc0NwogIH0sCiAgImxpbmtlZGluIjogewogICAgImhhbmRsZSI6ICJjb21wYW55L3ViZXItY29tIgogIH0sCiAgInR3aXR0ZXIiOiB7CiAgICAiaGFuZGxlIjogIlViZXIiLAogICAgImlkIjogIjE5MTAzNDgxIiwKICAgICJiaW8iOiAiSGVscGluZyBtaWxsaW9ucyBvZiBwZW9wbGUgbW92ZSB0b3dhcmRzIG9wcG9ydHVuaXR5IGV2ZXJ5IGRheSBpbiBvdmVyIDYwMCBjaXRpZXMgYXJvdW5kIHRoZSB3b3JsZC5cblxuSGF2ZSBhIHJlcXVlc3Q/IFNlZSBAVWJlcl9TdXBwb3J0LlxuXG4jRG9vcnNBcmVBbHdheXNPcGVuaW5nIiwKICAgICJmb2xsb3dlcnMiOiA5NjYxOTksCiAgICAiZm9sbG93aW5nIjogMzc5LAogICAgImxvY2F0aW9uIjogIkdsb2JhbCIsCiAgICAic2l0ZSI6ICJodHRwczovL3QuY28vQkthcHZkTFZGdiIsCiAgICAiYXZhdGFyIjogImh0dHBzOi8vcGJzLnR3aW1nLmNvbS9wcm9maWxlX2ltYWdlcy8xMDQ1NzgzMTAyMDAwMjMwNDAwL1RQTExhcVlSX25vcm1hbC5qcGciCiAgfSwKICAiY3J1bmNoYmFzZSI6IHsKICAgICJoYW5kbGUiOiAib3JnYW5pemF0aW9uL3ViZXIiCiAgfSwKICAiZW1haWxQcm92aWRlciI6IGZhbHNlLAogICJ0eXBlIjogInByaXZhdGUiLAogICJ0aWNrZXIiOiBudWxsLAogICJpZGVudGlmaWVycyI6IHsKICAgICJ1c0VJTiI6ICI0NTI2NDc0NDEiCiAgfSwKICAicGhvbmUiOiAiKzEgNDE1LTk4Ni0yMTA0IiwKICAibWV0cmljcyI6IHsKICAgICJhbGV4YVVzUmFuayI6IDU4NSwKICAgICJhbGV4YUdsb2JhbFJhbmsiOiAxMTUxLAogICAgImVtcGxveWVlcyI6IDEyMDAwLAogICAgImVtcGxveWVlc1JhbmdlIjogIjEwSy01MEsiLAogICAgIm1hcmtldENhcCI6IG51bGwsCiAgICAicmFpc2VkIjogbnVsbCwKICAgICJhbm51YWxSZXZlbnVlIjogNjUwMDAwMDAwMCwKICAgICJlc3RpbWF0ZWRBbm51YWxSZXZlbnVlIjogIiQxQi0kMTBCIiwKICAgICJmaXNjYWxZZWFyRW5kIjogMTIKICB9LAogICJpbmRleGVkQXQiOiAiMjAxOS0wMS0xOFQwMTozMjoyOS43MThaIiwKICAidGVjaCI6IFsKICAgICJvcHRpbWl6ZWx5IiwKICAgICJnb29nbGVfdGFnX21hbmFnZXIiLAogICAgImZhY2Vib29rX2FkdmVydGlzZXIiLAogICAgInRlYWxpdW0iLAogICAgImhvdGphciIsCiAgICAiZ29vZ2xlX2FuYWx5dGljcyIKICBdLAogICJwYXJlbnQiOiB7CiAgICAiZG9tYWluIjogbnVsbAogIH0KfQ==
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:20 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=ACH%20Electronic%20CreditGUSTO%20PAY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:20 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CD%20DEPOSIT%20.INITIAL.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:20 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Touchstone%20Climbing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Touchstone Climbing",
+          "domain": "touchstoneclimbing.com",
+          "logo": "https://logo.clearbit.com/touchstoneclimbing.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:20 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=touchstoneclimbing.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "61fe3195-8c0d-427c-ae75-bc02a49fde07",
+          "name": "Touchstone Climbing",
+          "legalName": null,
+          "domain": "touchstoneclimbing.com",
+          "domainAliases": [
+
+          ],
+          "site": {
+            "phoneNumbers": [
+              "+1 925-602-1000",
+              "+1 510-981-9900",
+              "+1 415-550-0515",
+              "+1 916-341-0100"
+            ],
+            "emailAddresses": [
+              "team@touchstoneclimbing.com"
+            ]
+          },
+          "category": {
+            "sector": "Consumer Discretionary",
+            "industryGroup": "Consumer Discretionary",
+            "industry": "Consumer Discretionary",
+            "subIndustry": "Consumer Discretionary",
+            "sicCode": "58",
+            "naicsCode": "72"
+          },
+          "tags": [
+            "B2C",
+            "E-commerce",
+            "Consumer Discretionary",
+            "Sporting Goods"
+          ],
+          "description": "California's largest community of indoor climbing and fitness gyms.",
+          "foundedYear": 1995,
+          "location": "2295 Harrison St, San Francisco, CA 94110, USA",
+          "timeZone": "America/Los_Angeles",
+          "utcOffset": -8,
+          "geo": {
+            "streetNumber": "2295",
+            "streetName": "Harrison Street",
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": "94110",
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.76075660000001,
+            "lng": -122.4124817
+          },
+          "logo": "https://logo.clearbit.com/touchstoneclimbing.com",
+          "facebook": {
+            "handle": "touchstoneclimbing",
+            "likes": 5146
+          },
+          "linkedin": {
+            "handle": "company/touchstone-climbing"
+          },
+          "twitter": {
+            "handle": "TouchstoneClimb",
+            "id": "41917663",
+            "bio": "We are 12 climbing gyms located throughout California. Biggest and bestest baby!",
+            "followers": 4016,
+            "following": 549,
+            "location": "California",
+            "site": "https://t.co/0N2mT5Ge8r",
+            "avatar": "https://pbs.twimg.com/profile_images/761601154174169088/bghJubNr_normal.jpg"
+          },
+          "crunchbase": {
+            "handle": "organization/touchstone-climbing"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "identifiers": {
+            "usEIN": null
+          },
+          "phone": null,
+          "metrics": {
+            "alexaUsRank": 22844,
+            "alexaGlobalRank": 124971,
+            "employees": 150,
+            "employeesRange": "51-250",
+            "marketCap": null,
+            "raised": null,
+            "annualRevenue": null,
+            "estimatedAnnualRevenue": "$10M-$50M",
+            "fiscalYearEnd": null
+          },
+          "indexedAt": "2019-01-21T20:17:20.628Z",
+          "tech": [
+            "google_apps",
+            "crazy_egg",
+            "facebook_advertiser",
+            "youtube",
+            "wordpress",
+            "nginx",
+            "google_cloud",
+            "google_analytics",
+            "facebook_connect",
+            "recaptcha",
+            "gravity_forms",
+            "instagram",
+            "google_maps",
+            "google_tag_manager"
+          ],
+          "parent": {
+            "domain": null
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:21 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:21 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=united.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "9d0e531a-366e-4168-9d6f-84dcf758b562",
+          "name": "United Airlines",
+          "legalName": "United Airlines, Inc.",
+          "domain": "united.com",
+          "domainAliases": [
+            "unitedcontinentalholdings.com",
+            "unitedairlines.com",
+            "mileageplus.com",
+            "unitedwifi.com",
+            "united.com.br",
+            "united.fr",
+            "united.com.mx"
+          ],
+          "site": {
+            "phoneNumbers": [
+
+            ],
+            "emailAddresses": [
+
+            ]
+          },
+          "category": {
+            "sector": "Industrials",
+            "industryGroup": "Transportation",
+            "industry": "Airlines",
+            "subIndustry": "Airlines",
+            "sicCode": "45",
+            "naicsCode": "48"
+          },
+          "tags": [
+            "B2C",
+            "Airlines"
+          ],
+          "description": "United Airlines, Inc., commonly referred to as United, is a major United States airline headquartered in Chicago, Illinois.",
+          "foundedYear": 1926,
+          "location": "Willis Tower Skydeck, 233 S Wacker Dr, Chicago, IL 60606, USA",
+          "timeZone": "America/Chicago",
+          "utcOffset": -6,
+          "geo": {
+            "streetNumber": "233",
+            "streetName": "South Wacker Drive",
+            "subPremise": null,
+            "city": "Chicago",
+            "postalCode": "60606",
+            "state": "Illinois",
+            "stateCode": "IL",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 41.8788632,
+            "lng": -87.6359078
+          },
+          "logo": null,
+          "facebook": {
+            "handle": "united",
+            "likes": 1072447
+          },
+          "linkedin": {
+            "handle": "company/united-airlines"
+          },
+          "twitter": {
+            "handle": "united",
+            "id": "260907612",
+            "bio": "Conversations with you here are 280 characters-friendly. Tweet us any time. For a formal response visit https://t.co/cpgjUnDsve.",
+            "followers": 1008509,
+            "following": 44924,
+            "location": "",
+            "site": "https://t.co/zbk6AGOnwz",
+            "avatar": "https://pbs.twimg.com/profile_images/1013780820253859841/pfecaTsC_normal.jpg"
+          },
+          "crunchbase": {
+            "handle": "organization/united-airlines-2"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "identifiers": {
+            "usEIN": "742099724"
+          },
+          "phone": "+1 312-997-8000",
+          "metrics": {
+            "alexaUsRank": 237,
+            "alexaGlobalRank": 1090,
+            "employees": 89800,
+            "employeesRange": "50K-100K",
+            "marketCap": null,
+            "raised": null,
+            "annualRevenue": 37736000000,
+            "estimatedAnnualRevenue": "$10B+",
+            "fiscalYearEnd": null
+          },
+          "indexedAt": "2019-01-23T01:32:54.832Z",
+          "tech": [
+            "typekit_by_adobe",
+            "microsoft_exchange_online",
+            "outlook",
+            "akamai_dns",
+            "google_analytics"
+          ],
+          "parent": {
+            "domain": "unitedcontinentalholdings.com"
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:21 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=McDonald%27s
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "McDonald's",
+          "domain": "mcdonalds.com",
+          "logo": "https://logo.clearbit.com/mcdonalds.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:21 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=mcdonalds.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICJiZWUzNDU3Zi04MjlhLTQ0MjktYWMxZS1kZGQ2YzRkYWM3NDciLAogICJuYW1lIjogIk1jRG9uYWxkJ3MiLAogICJsZWdhbE5hbWUiOiAiTWNEb25hbGTigJlzIENvcnAuIiwKICAiZG9tYWluIjogIm1jZG9uYWxkcy5jb20iLAogICJkb21haW5BbGlhc2VzIjogWwogICAgIm1jZG9uYWxkcy5jYSIsCiAgICAiYWJvdXRtY2RvbmFsZHMuY29tIiwKICAgICJtY2RvbmFsZHMuYXNpYSIsCiAgICAibWNkb25hbGRzLmNvLnVrIiwKICAgICJwbGF5YXRtY2QuY29tIiwKICAgICJtY2RvbmFsZHMubm8iLAogICAgIm1jZG9uYWxkcy11YWUuY29tIiwKICAgICJtY2RvbmFsZHMuZGsiLAogICAgIm1jZG9uYWxkcy5zZSIsCiAgICAibWNkb25hbGRzLnNnIgogIF0sCiAgInNpdGUiOiB7CiAgICAicGhvbmVOdW1iZXJzIjogWwoKICAgIF0sCiAgICAiZW1haWxBZGRyZXNzZXMiOiBbCgogICAgXQogIH0sCiAgImNhdGVnb3J5IjogewogICAgInNlY3RvciI6ICJDb25zdW1lciBEaXNjcmV0aW9uYXJ5IiwKICAgICJpbmR1c3RyeUdyb3VwIjogIkNvbnN1bWVyIFNlcnZpY2VzIiwKICAgICJpbmR1c3RyeSI6ICJIb3RlbHMsIFJlc3RhdXJhbnRzICYgTGVpc3VyZSIsCiAgICAic3ViSW5kdXN0cnkiOiAiUmVzdGF1cmFudHMiLAogICAgInNpY0NvZGUiOiAiNTgiLAogICAgIm5haWNzQ29kZSI6ICI3MiIKICB9LAogICJ0YWdzIjogWwogICAgIlJlc3RhdXJhbnRzIiwKICAgICJGb29kIiwKICAgICJCZXZlcmFnZXMiLAogICAgIkIyQyIKICBdLAogICJkZXNjcmlwdGlvbiI6ICJNY0RvbmFsZCdzIGlzIGFuIEFtZXJpY2FuIGZhc3QgZm9vZCBjb21wYW55LCBmb3VuZGVkIGluIDE5NDAgYXMgYSByZXN0YXVyYW50IG9wZXJhdGVkIGJ5IFJpY2hhcmQgYW5kIE1hdXJpY2UgTWNEb25hbGQsIGluIFNhbiBCZXJuYXJkaW5vLCBDYWxpZm9ybmlhLCBVbml0ZWQgU3RhdGVzLiIsCiAgImZvdW5kZWRZZWFyIjogMTk1NSwKICAibG9jYXRpb24iOiAiMjExMSBNY0RvbmFsZCBEciwgT2FrIEJyb29rLCBJTCA2MDUyMywgVVNBIiwKICAidGltZVpvbmUiOiAiQW1lcmljYS9DaGljYWdvIiwKICAidXRjT2Zmc2V0IjogLTYsCiAgImdlbyI6IHsKICAgICJzdHJlZXROdW1iZXIiOiAiMjExMSIsCiAgICAic3RyZWV0TmFtZSI6ICJNY0RvbmFsZCBEcml2ZSIsCiAgICAic3ViUHJlbWlzZSI6IG51bGwsCiAgICAiY2l0eSI6ICJPYWsgQnJvb2siLAogICAgInBvc3RhbENvZGUiOiAiNjA1MjMiLAogICAgInN0YXRlIjogIklsbGlub2lzIiwKICAgICJzdGF0ZUNvZGUiOiAiSUwiLAogICAgImNvdW50cnkiOiAiVW5pdGVkIFN0YXRlcyIsCiAgICAiY291bnRyeUNvZGUiOiAiVVMiLAogICAgImxhdCI6IDQxLjg0Nzg2MTUsCiAgICAibG5nIjogLTg3Ljk0NDgxODA5OTk5OTk5CiAgfSwKICAibG9nbyI6ICJodHRwczovL2xvZ28uY2xlYXJiaXQuY29tL21jZG9uYWxkcy5jb20iLAogICJmYWNlYm9vayI6IHsKICAgICJoYW5kbGUiOiAibWNkb25hbGRzIiwKICAgICJsaWtlcyI6IDcyODAxMTIxCiAgfSwKICAibGlua2VkaW4iOiB7CiAgICAiaGFuZGxlIjogImNvbXBhbnkvbWNkb25hbGQlMjdzLWNvcnBvcmF0aW9uIgogIH0sCiAgInR3aXR0ZXIiOiB7CiAgICAiaGFuZGxlIjogIk1jRG9uYWxkcyIsCiAgICAiaWQiOiAiNzEwMjYxMjIiLAogICAgImJpbyI6ICJXZWxjb21lIHRvIHRoZSBNY0RvbmFsZOKAmXMgVVNBIFR3aXR0ZXIgcGFnZSEgICBGb2xsb3cgQE1jRG9uYWxkc0NvcnAgZm9yIGNvbXBhbnkgbmV3cyAmIGJpeiB1cGRhdGVzLiIsCiAgICAiZm9sbG93ZXJzIjogMzUyMDU3MCwKICAgICJmb2xsb3dpbmciOiAxNDE2MSwKICAgICJsb2NhdGlvbiI6ICIiLAogICAgInNpdGUiOiAiaHR0cHM6Ly90LmNvL0xvSEdCQUx6TWYiLAogICAgImF2YXRhciI6ICJodHRwczovL3Bicy50d2ltZy5jb20vcHJvZmlsZV9pbWFnZXMvOTcxOTg5NDQ4NzY1MjcyMDY0L0c4dzZOZURYX25vcm1hbC5qcGciCiAgfSwKICAiY3J1bmNoYmFzZSI6IHsKICAgICJoYW5kbGUiOiAib3JnYW5pemF0aW9uL21jZG9uYWxkcyIKICB9LAogICJlbWFpbFByb3ZpZGVyIjogZmFsc2UsCiAgInR5cGUiOiAicHVibGljIiwKICAidGlja2VyIjogIk1DRCIsCiAgImlkZW50aWZpZXJzIjogewogICAgInVzRUlOIjogIjM2MjM2MTI4MiIKICB9LAogICJwaG9uZSI6ICIrMSA2MzAtNjIzLTMwMDAiLAogICJtZXRyaWNzIjogewogICAgImFsZXhhVXNSYW5rIjogMTkxOCwKICAgICJhbGV4YUdsb2JhbFJhbmsiOiA2Mzk1LAogICAgImVtcGxveWVlcyI6IDI1NDQyMCwKICAgICJlbXBsb3llZXNSYW5nZSI6ICIxMDBLKyIsCiAgICAibWFya2V0Q2FwIjogMTQwNTg5MDMzMDAwLAogICAgInJhaXNlZCI6IG51bGwsCiAgICAiYW5udWFsUmV2ZW51ZSI6IDIyODIwMDAwMDAwLAogICAgImVzdGltYXRlZEFubnVhbFJldmVudWUiOiAiJDEwQisiLAogICAgImZpc2NhbFllYXJFbmQiOiAxMgogIH0sCiAgImluZGV4ZWRBdCI6ICIyMDE5LTAxLTE2VDAxOjMzOjExLjI4N1oiLAogICJ0ZWNoIjogWwogICAgImdvb2dsZV90YWdfbWFuYWdlciIsCiAgICAiYXdzX3JvdXRlXzUzIiwKICAgICJnb19zcXVhcmVkIiwKICAgICJiaW5nX2FkdmVydGlzZXIiLAogICAgImFkb2JlX2R5bmFtaWNfdGFnX21hbmFnZW1lbnQiLAogICAgImFtYXpvbl9zZXMiCiAgXSwKICAicGFyZW50IjogewogICAgImRvbWFpbiI6IG51bGwKICB9Cn0=
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:22 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Starbucks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Starbucks",
+          "domain": "starbucks.com",
+          "logo": "https://logo.clearbit.com/starbucks.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:22 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=starbucks.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICIyYmM5MjMzMC02MTc1LTRkMzctYmNmNy0zMTQzYjc1MmEyZTQiLAogICJuYW1lIjogIlN0YXJidWNrcyIsCiAgImxlZ2FsTmFtZSI6ICJTdGFyYnVja3MgQ29ycC4iLAogICJkb21haW4iOiAic3RhcmJ1Y2tzLmNvbSIsCiAgImRvbWFpbkFsaWFzZXMiOiBbCiAgICAic3RhcmJ1Y2tzY29tbXVuaXRpZXMubmV0IiwKICAgICJnc2RyZXNvdXJjZWNlbnRlci5jb20iLAogICAgInZlcmlzbW1vLmNvbSIsCiAgICAic3RhcmJ1Y2tmb3VuZGF0aW9ucy5jb20iLAogICAgInN0YXJidWNrcy1vbmUtdHdvLm5ldCIsCiAgICAic3RhcmJ1Y2tzb25ldHdvLm5ldCIsCiAgICAic3RhcmJ1Y2tzLmNvIiwKICAgICJzdGFyYnVja3Nmb3VuZGF0aW9ucy5vcmciLAogICAgInN0YXJidWNrc2NvZmZlZXJ1bi5jb20iLAogICAgInR3ZWV0YWNvZmZlZS5jb20iLAogICAgInN0YXJidWNrc2FtZXJpY2EuY29tIiwKICAgICJ3aGF0bWFrZXNjb2ZmZWVnb29kLmNvbSIsCiAgICAidmVyaXNtb3N5c3RlbS5jb20iLAogICAgImZyYXBwdWNjaW5vbWFjaGluZS5jb20iLAogICAgInN0YXJidWNrc29uZXR3by5jb20iLAogICAgImNsb3ZlcmNvZmZlZXMuY29tIiwKICAgICJjbG92ZXJjb2ZmZWUuY29tIiwKICAgICJjbG92ZXJ0ZWEuY29tIiwKICAgICJtZWV0dXBhdHN0YXJidWNrcy5vcmciLAogICAgImR1ZXR0b2NhcmQuY2EiLAogICAgInN0YXJidWNrcy1vbmV0d28ub3JnIiwKICAgICJzdGFyYnVja3NjcmVhdGl2ZS5uZXQiLAogICAgInN0YXJidWNrc2NvbW11bml0eS5uZXQiLAogICAgInN0YXJidWNrc2NyZWF0aXZlLm9yZyIsCiAgICAidmVycmlzbW8uY29tIiwKICAgICJzdGFyYnVja3Njb2ZmZWVydW4ub3JnIiwKICAgICJzdGFyYnVja3NzaG9wcy5jby5pbiIsCiAgICAidmVyaXNpbW9zdG9yZS5jb20iLAogICAgInZpcmljZW1vLmNvbSIsCiAgICAic3RhcmJ1Y2tzY29mZmVlcnVuLm5ldCIsCiAgICAic3RhcmJ1Y2tzaW50ZXJhY3RpdmUuY29tIiwKICAgICJzdGFyYnVja3Mtb25lLXR3by5jb20iLAogICAgInZlcmlzbW9zeXN0ZW0uY28udWsiLAogICAgInN0YXJidWNrczEtdHdvLmNvbSIsCiAgICAic3RhcmJ1Y2tzcnVuLm5ldCIsCiAgICAiY2xvdmVyY3JhZnRlZC5jb20iLAogICAgInN0YXJidWNrc29uZXR3by5vcmciLAogICAgImRvdWJsZXNob3QuY29tIiwKICAgICJteXN1bW1lcmFkdmVudHVyZS5vcmciLAogICAgImxldHNtZWV0YXRzdGFyYnVja3Mub3JnIiwKICAgICJzdGFyYnVja3MxdHdvLmNvbSIsCiAgICAibXlzdGFyYnVja3MubW9iaSIsCiAgICAidGhlc3RhcmJ1Y2tzYmxvZy5jb20iLAogICAgInN0YXJidWNrc2xpcXVldXIub3JnIiwKICAgICJzdGFyYnVja3NjcmVhdGl2ZS5jb20iLAogICAgInN0YXJidWNrc2xpcXVldXIubmV0IiwKICAgICJzdGFyYnVja3NsaXZlLmNvbSIsCiAgICAic3RhcmJ1Y2tzY2FyZGR1ZXR0b3Zpc2EuY29tIiwKICAgICJzdGFyYnVja3NzaGFyZWRwbGFuZXQuY29tIiwKICAgICJzdGFyYnVja3Mtb25lLXR3by5vcmciLAogICAgImNvZmZlZXBhcnRuZXJzLWhpLmNvbSIsCiAgICAic3RhcmJ1Y2tzcnVuLmNvbSIsCiAgICAic3RhcmJ1Y2tzbmV0d29yay5uZXQiLAogICAgInN0YXJidWNrc3Zpc2EuY29tIiwKICAgICJzYnV4LmNvLmluIiwKICAgICJzdGFyYnVja3NsaXF1b3JzLmNvbSIsCiAgICAic3RhcmJ1Y2tzZ3JvY2VyeS5vcmciLAogICAgInN0YXJidWNrczEtdHdvLm5ldCIsCiAgICAibWFzdHJlbmEuY29tIiwKICAgICJzdGFyYnVja3NydW4ub3JnIiwKICAgICJsZXRzbWVldGF0c3RhcmJ1Y2tzLm5ldCIsCiAgICAic3RhcmJ1Y2tzbGlxdWV1ci5jb20iLAogICAgInN0YXJidWNrc2dyb2NlcnkubmV0IiwKICAgICJ2ZXJpc21vY29mZmVlaG91c2UubmV0IiwKICAgICJzdGFyYnVja3Mtb25lMi5jb20iLAogICAgInN0YXJidWNrc2dyb2NlcnkuY29tIiwKICAgICJ2ZXJpc21vc3lzdGVtLm5ldCIsCiAgICAic3RhcmJ1Y2tzc3RvcmUuY28uaW4iLAogICAgInN0YXJidWNrc2R1ZXR0b3Zpc2EuY29tIiwKICAgICJzdGFyYnVja3NsaXF1ZXVycy5jb20iLAogICAgIm15c2J1eC5pbiIsCiAgICAic3RhcmJ1Y2tzaW50ZXJuZXRjYWZlLmNvbSIsCiAgICAibXlzYnV4LmRlIiwKICAgICJzdGFyYnVja3NvbmxpbmUuY29tIiwKICAgICJ2ZXJpc21vc3lzdGVtLmpwIiwKICAgICJzdGFyYnVja3NzaGFyZWRwbGFuZXRzLm9yZyIsCiAgICAidmVyaXppbW8uY29tIiwKICAgICJzdGFyYnVja3Mtb25ldHdvLm5ldCIsCiAgICAic3RhcmJ1Y2tzY29tbXVuaXR5Lm9yZyIsCiAgICAidmVyaXNpbW8uY29tIiwKICAgICJteXNidXguY2EiLAogICAgInN0YXJidWNrc2xpcXVvci5jb20iLAogICAgIm1lZXR1cGF0c3RhcmJ1Y2tzLmNvbSIsCiAgICAic3RhcmJ1Y2tzc2hpcnQub3JnIiwKICAgICJzdGFyYnVja3MxdHdvLm5ldCIsCiAgICAic3RhcmJ1Y2tzY29tbXVuaXR5LmNvbSIsCiAgICAic3RhcmJ1Y2tzLW9uZXR3by5jb20iLAogICAgIm15c2J1eC5ydSIsCiAgICAic3RhcmJ1Y2tzbWVyY2hhbmRpc2UuY29tIiwKICAgICJzdGFyYnVja3NpbnRlcmFjdGl2ZS5vcmciLAogICAgInN0YXJidWNrc3NwZWFrcy5vcmciLAogICAgInZlcnJpc21vLm5ldCIsCiAgICAic3RhcmJ1Y2tzY3JlYW1saXF1ZXVycy5jb20iLAogICAgIm15c3RhcmJ1Y2tzaWRlYXMuY29tIiwKICAgICJteXN1bW1lcmFkdmVudHVyZS5uZXQiLAogICAgInN0YXJidWNrc25ldHdvcmsuY29tIiwKICAgICJ2ZXJpc21vc3RvcmUuY29tIiwKICAgICJzdGFyYnVja3MxLXR3by5vcmciLAogICAgInN0YXJidWNrc2Nsb3ZlcnMuY29tIiwKICAgICJ2ZXJpc21vc3lzdGVtLmRlIgogIF0sCiAgInNpdGUiOiB7CiAgICAicGhvbmVOdW1iZXJzIjogWwogICAgICAiKzEgMjA2LTMxOC03MTE4IiwKICAgICAgIisxIDgwMC03ODItNzI4MiIsCiAgICAgICIrMSA4MDAtOTUyLTUyMTAiCiAgICBdLAogICAgImVtYWlsQWRkcmVzc2VzIjogWwogICAgICAiRXRoaWNzQW5kQ29tcGxpYW5jZUBTdGFyYnVja3MuY29tIiwKICAgICAgImludmVzdG9ycmVsYXRpb25zQHN0YXJidWNrcy5jb20iLAogICAgICAiaW5mb0BzdGFyYnVja3MuY29tIgogICAgXQogIH0sCiAgImNhdGVnb3J5IjogewogICAgInNlY3RvciI6ICJDb25zdW1lciBTdGFwbGVzIiwKICAgICJpbmR1c3RyeUdyb3VwIjogIkZvb2QsIEJldmVyYWdlICYgVG9iYWNjbyIsCiAgICAiaW5kdXN0cnkiOiAiQmV2ZXJhZ2VzIiwKICAgICJzdWJJbmR1c3RyeSI6ICJCZXZlcmFnZXMiLAogICAgInNpY0NvZGUiOiAiNTgiLAogICAgIm5haWNzQ29kZSI6ICI0NCIKICB9LAogICJ0YWdzIjogWwogICAgIkJldmVyYWdlcyIsCiAgICAiRm9vZCIsCiAgICAiQ29uc3VtZXIgU3RhcGxlcyIsCiAgICAiQjJDIiwKICAgICJSZXRhaWwiCiAgXSwKICAiZGVzY3JpcHRpb24iOiAiU3RhcmJ1Y2tzIENvcnBvcmF0aW9uIGlzIGFuIEFtZXJpY2FuIGNvZmZlZSBjb21wYW55IGFuZCBjb2ZmZWVob3VzZSBjaGFpbi4iLAogICJmb3VuZGVkWWVhciI6IDE5NzEsCiAgImxvY2F0aW9uIjogIlNlYXR0bGUsIFdBIDk4MTI0LCBVU0EiLAogICJ0aW1lWm9uZSI6ICJBbWVyaWNhL0xvc19BbmdlbGVzIiwKICAidXRjT2Zmc2V0IjogLTgsCiAgImdlbyI6IHsKICAgICJzdHJlZXROdW1iZXIiOiBudWxsLAogICAgInN0cmVldE5hbWUiOiBudWxsLAogICAgInN1YlByZW1pc2UiOiBudWxsLAogICAgImNpdHkiOiAiU2VhdHRsZSIsCiAgICAicG9zdGFsQ29kZSI6ICI5ODEyNCIsCiAgICAic3RhdGUiOiAiV2FzaGluZ3RvbiIsCiAgICAic3RhdGVDb2RlIjogIldBIiwKICAgICJjb3VudHJ5IjogIlVuaXRlZCBTdGF0ZXMiLAogICAgImNvdW50cnlDb2RlIjogIlVTIiwKICAgICJsYXQiOiA0Ny42MSwKICAgICJsbmciOiAtMTIyLjMzCiAgfSwKICAibG9nbyI6ICJodHRwczovL2xvZ28uY2xlYXJiaXQuY29tL3N0YXJidWNrcy5jb20iLAogICJmYWNlYm9vayI6IHsKICAgICJoYW5kbGUiOiAic3RhcmJ1Y2tzIiwKICAgICJsaWtlcyI6IDM3MDIzNTA0CiAgfSwKICAibGlua2VkaW4iOiB7CiAgICAiaGFuZGxlIjogImNvbXBhbnkvc3RhcmJ1Y2tzIgogIH0sCiAgInR3aXR0ZXIiOiB7CiAgICAiaGFuZGxlIjogIlN0YXJidWNrcyIsCiAgICAiaWQiOiAiMzA5NzMiLAogICAgImJpbyI6ICJJbnNwaXJpbmcgYW5kIG51cnR1cmluZyB0aGUgaHVtYW4gc3Bpcml04oCUb25lIHBlcnNvbiwgb25lIGN1cCwgb25lIG5laWdoYm9yaG9vZCBhdCBhIHRpbWUuIiwKICAgICJmb2xsb3dlcnMiOiAxMTQzODYzMywKICAgICJmb2xsb3dpbmciOiA5NjU0MSwKICAgICJsb2NhdGlvbiI6ICJTZWF0dGxlLCBXQSIsCiAgICAic2l0ZSI6ICJodHRwczovL3QuY28vOEQ0THU3dVdTNCIsCiAgICAiYXZhdGFyIjogImh0dHBzOi8vcGJzLnR3aW1nLmNvbS9wcm9maWxlX2ltYWdlcy85NjgxNzM0NTU1ODAzOTc1NjgvUWUwcFNaVGtfbm9ybWFsLmpwZyIKICB9LAogICJjcnVuY2hiYXNlIjogewogICAgImhhbmRsZSI6ICJvcmdhbml6YXRpb24vc3RhcmJ1Y2tzIgogIH0sCiAgImVtYWlsUHJvdmlkZXIiOiBmYWxzZSwKICAidHlwZSI6ICJwdWJsaWMiLAogICJ0aWNrZXIiOiAiU0JVWCIsCiAgImlkZW50aWZpZXJzIjogewogICAgInVzRUlOIjogIjkxMTMyNTY3MSIKICB9LAogICJwaG9uZSI6ICIrMSAyMDYtNDQ3LTE1NzUiLAogICJtZXRyaWNzIjogewogICAgImFsZXhhVXNSYW5rIjogNDU2LAogICAgImFsZXhhR2xvYmFsUmFuayI6IDI3MDgsCiAgICAiZW1wbG95ZWVzIjogMTI5NTcwLAogICAgImVtcGxveWVlc1JhbmdlIjogIjEwMEsrIiwKICAgICJtYXJrZXRDYXAiOiA4Mjk4Mzg0OTAwMCwKICAgICJyYWlzZWQiOiBudWxsLAogICAgImFubnVhbFJldmVudWUiOiAyMTMxNTkwMDAwMCwKICAgICJlc3RpbWF0ZWRBbm51YWxSZXZlbnVlIjogIiQxMEIrIiwKICAgICJmaXNjYWxZZWFyRW5kIjogOQogIH0sCiAgImluZGV4ZWRBdCI6ICIyMDE5LTAxLTAxVDA0OjIxOjQ5LjQzNloiLAogICJ0ZWNoIjogWwogICAgInplbmRlc2siLAogICAgIm9wdGltaXplbHkiLAogICAgImdvb2dsZV90YWdfbWFuYWdlciIsCiAgICAic2VuZGdyaWQiLAogICAgIm1pY3Jvc29mdF9leGNoYW5nZV9vbmxpbmUiLAogICAgImRlbWFuZHdhcmUiLAogICAgImlvcyIsCiAgICAiZmFjZWJvb2tfY29ubmVjdCIsCiAgICAib3V0bG9vayIsCiAgICAibmV3X3JlbGljIiwKICAgICJuZ2lueCIsCiAgICAiZ29vZ2xlX21hcHMiLAogICAgImJyaWdodGNvdmUiLAogICAgInF1YWxhcm9vIiwKICAgICJiaW5nX2FkdmVydGlzZXIiLAogICAgImdvb2dsZV9hbmFseXRpY3MiCiAgXSwKICAicGFyZW50IjogewogICAgImRvbWFpbiI6IG51bGwKICB9Cn0=
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:22 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=SparkFun
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:22 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=INTRST%20PYMNT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:23 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:24 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:24 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Tectra%20Inc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:24 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=AUTOMATIC%20PAYMENT%20-%20THANK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:25 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=KFC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "KFC",
+          "domain": "kfc.com",
+          "logo": "https://logo.clearbit.com/kfc.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:25 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=kfc.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICJkMzA2OGYyOS1lNzhjLTQwNmEtOWIzZC0xOWM1ODJmMjA4YTgiLAogICJuYW1lIjogIktGQyIsCiAgImxlZ2FsTmFtZSI6ICJLRkMgQ29ycG9yYXRpb24iLAogICJkb21haW4iOiAia2ZjLmNvbSIsCiAgImRvbWFpbkFsaWFzZXMiOiBbCiAgICAia2ZjbGltaXRlZC5jb20iCiAgXSwKICAic2l0ZSI6IHsKICAgICJwaG9uZU51bWJlcnMiOiBbCgogICAgXSwKICAgICJlbWFpbEFkZHJlc3NlcyI6IFsKCiAgICBdCiAgfSwKICAiY2F0ZWdvcnkiOiB7CiAgICAic2VjdG9yIjogIkNvbnN1bWVyIERpc2NyZXRpb25hcnkiLAogICAgImluZHVzdHJ5R3JvdXAiOiAiQ29uc3VtZXIgU2VydmljZXMiLAogICAgImluZHVzdHJ5IjogIkhvdGVscywgUmVzdGF1cmFudHMgJiBMZWlzdXJlIiwKICAgICJzdWJJbmR1c3RyeSI6ICJSZXN0YXVyYW50cyIsCiAgICAic2ljQ29kZSI6ICI1OCIsCiAgICAibmFpY3NDb2RlIjogIjcyIgogIH0sCiAgInRhZ3MiOiBbCiAgICAiUmVzdGF1cmFudHMiLAogICAgIkZvb2QiLAogICAgIkJldmVyYWdlcyIsCiAgICAiQjJDIiwKICAgICJQb3Jub2dyYXBoeSIKICBdLAogICJkZXNjcmlwdGlvbiI6ICJHVUlERUxJTkVTIEZPUiBTVUJNSVRUSU5HIENPTlRFTlQgVE8gS0ZDICAgIFRoZSBmb2xsb3dpbmcgZ3VpZGVsaW5lcyBvdXRsaW5lIGhvdyB0byBzdWJtaXQgYSBwaG90bywgdmlkZW8sIG9yIG90aGVyIGRpZ2l0YWwgaW1hZ2UgKOKAnENvbnRlbnTigJ0pIHRvIEtGQy4gICAgIENyZWF0aW5nIENvbnRlbnQgIGEuXHRETyBOT1QgdXNlIG90aGVy4oCZcyBwcm9wZXJ0eSAoZS5nLiBjb3B5cmlnaHRlZCBtdXNpYywgcGhvdG9zLCB2aWRlb3MsIHRyYWRlbWFyLi4uIiwKICAiZm91bmRlZFllYXIiOiAxODkwLAogICJsb2NhdGlvbiI6ICIxMDQzIE4gM3JkIEF2ZSwgQ2hhdHN3b3J0aCwgR0EgMzA3MDUsIFVTQSIsCiAgInRpbWVab25lIjogIkFtZXJpY2EvTmV3X1lvcmsiLAogICJ1dGNPZmZzZXQiOiAtNSwKICAiZ2VvIjogewogICAgInN0cmVldE51bWJlciI6ICIxMDQzIiwKICAgICJzdHJlZXROYW1lIjogIk5vcnRoIDNyZCBBdmVudWUiLAogICAgInN1YlByZW1pc2UiOiBudWxsLAogICAgImNpdHkiOiAiQ2hhdHN3b3J0aCIsCiAgICAicG9zdGFsQ29kZSI6ICIzMDcwNSIsCiAgICAic3RhdGUiOiAiR2VvcmdpYSIsCiAgICAic3RhdGVDb2RlIjogIkdBIiwKICAgICJjb3VudHJ5IjogIlVuaXRlZCBTdGF0ZXMiLAogICAgImNvdW50cnlDb2RlIjogIlVTIiwKICAgICJsYXQiOiAzNC43ODQyMDg4MDAwMDAwMSwKICAgICJsbmciOiAtODQuNzcxMzEzNwogIH0sCiAgImxvZ28iOiAiaHR0cHM6Ly9sb2dvLmNsZWFyYml0LmNvbS9rZmMuY29tIiwKICAiZmFjZWJvb2siOiB7CiAgICAiaGFuZGxlIjogImtmYyIsCiAgICAibGlrZXMiOiA0NzEzNDI2MQogIH0sCiAgImxpbmtlZGluIjogewogICAgImhhbmRsZSI6ICJjb21wYW55L2tmYyIKICB9LAogICJ0d2l0dGVyIjogewogICAgImhhbmRsZSI6ICJrZmMiLAogICAgImlkIjogIjE1MzkyMzkxIiwKICAgICJiaW8iOiAiS2VudHVja3kgRnJpZWQgQ2hpY2tlbi4gRm91bmRlZCBieSBUaGUgQ29sb25lbC4gUHJhY3RpdGlvbmVycyBvZiBUaGUgSGFyZCBXYXkuIFB1cnZleW9ycyBvZiB0aGUgV29ybGQncyBCZXN0IENoaWNrZW4uIiwKICAgICJmb2xsb3dlcnMiOiAxMzE4NDAzLAogICAgImZvbGxvd2luZyI6IDExLAogICAgImxvY2F0aW9uIjogIkxvdWlzdmlsbGUsIEtZLCBVU0EiLAogICAgInNpdGUiOiAiaHR0cHM6Ly90LmNvL3NCblp2QlBWZHQiLAogICAgImF2YXRhciI6ICJodHRwczovL3Bicy50d2ltZy5jb20vcHJvZmlsZV9pbWFnZXMvMTA3OTQwNzk0ODcxODIzNTY0OC9Mc0VuMHNORV9ub3JtYWwuanBnIgogIH0sCiAgImNydW5jaGJhc2UiOiB7CiAgICAiaGFuZGxlIjogIm9yZ2FuaXphdGlvbi9rZmMiCiAgfSwKICAiZW1haWxQcm92aWRlciI6IGZhbHNlLAogICJ0eXBlIjogInByaXZhdGUiLAogICJ0aWNrZXIiOiBudWxsLAogICJpZGVudGlmaWVycyI6IHsKICAgICJ1c0VJTiI6IG51bGwKICB9LAogICJwaG9uZSI6IG51bGwsCiAgIm1ldHJpY3MiOiB7CiAgICAiYWxleGFVc1JhbmsiOiA2MTY5LAogICAgImFsZXhhR2xvYmFsUmFuayI6IDM2NTcyLAogICAgImVtcGxveWVlcyI6IDY3MDAwLAogICAgImVtcGxveWVlc1JhbmdlIjogIjUwSy0xMDBLIiwKICAgICJtYXJrZXRDYXAiOiBudWxsLAogICAgInJhaXNlZCI6IG51bGwsCiAgICAiYW5udWFsUmV2ZW51ZSI6IDIzMDAwMDAwMDAwLAogICAgImVzdGltYXRlZEFubnVhbFJldmVudWUiOiAiJDEwQisiLAogICAgImZpc2NhbFllYXJFbmQiOiBudWxsCiAgfSwKICAiaW5kZXhlZEF0IjogIjIwMTktMDEtMTFUMDE6MzQ6MDQuNjk0WiIsCiAgInRlY2giOiBbCiAgICAiYmluZ19hZHZlcnRpc2VyIiwKICAgICJha2FtYWlfZG5zIiwKICAgICJtaWNyb3NvZnRfZXhjaGFuZ2Vfb25saW5lIiwKICAgICJvdXRsb29rIiwKICAgICJnb29nbGVfYW5hbHl0aWNzIgogIF0sCiAgInBhcmVudCI6IHsKICAgICJkb21haW4iOiAieXVtY2hpbmEuY29tIgogIH0KfQ==
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:25 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Madison%20Bicycle%20Shop
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:25 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CREDIT%20CARD%20PAYMENT%20*//
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:26 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:26 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=ACH%20Electronic%20CreditGUSTO%20PAY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:26 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CD%20DEPOSIT%20.INITIAL.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:26 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Touchstone%20Climbing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Touchstone Climbing",
+          "domain": "touchstoneclimbing.com",
+          "logo": "https://logo.clearbit.com/touchstoneclimbing.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:27 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:27 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=McDonald%27s
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "McDonald's",
+          "domain": "mcdonalds.com",
+          "logo": "https://logo.clearbit.com/mcdonalds.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:27 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Starbucks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Starbucks",
+          "domain": "starbucks.com",
+          "logo": "https://logo.clearbit.com/starbucks.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:27 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=SparkFun
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:27 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=INTRST%20PYMNT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:28 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:28 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:28 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Tectra%20Inc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:28 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=AUTOMATIC%20PAYMENT%20-%20THANK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:29 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=KFC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "KFC",
+          "domain": "kfc.com",
+          "logo": "https://logo.clearbit.com/kfc.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:29 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Madison%20Bicycle%20Shop
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:29 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CREDIT%20CARD%20PAYMENT%20*//
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:29 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:29 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=ACH%20Electronic%20CreditGUSTO%20PAY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:30 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:30 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=CD%20DEPOSIT%20.INITIAL.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:30 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:30 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Touchstone%20Climbing
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:30 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Touchstone Climbing",
+          "domain": "touchstoneclimbing.com",
+          "logo": "https://logo.clearbit.com/touchstoneclimbing.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:30 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:30 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:30 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=McDonald%27s
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:30 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "McDonald's",
+          "domain": "mcdonalds.com",
+          "logo": "https://logo.clearbit.com/mcdonalds.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:30 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Starbucks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:31 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Starbucks",
+          "domain": "starbucks.com",
+          "logo": "https://logo.clearbit.com/starbucks.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:31 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=SparkFun
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:31 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:31 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=INTRST%20PYMNT
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:31 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:31 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=United%20Airlines
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "United Airlines",
+          "domain": "united.com",
+          "logo": null
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:32 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:32 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Tectra%20Inc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:32 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=AUTOMATIC%20PAYMENT%20-%20THANK
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:32 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=KFC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "KFC",
+          "domain": "kfc.com",
+          "logo": "https://logo.clearbit.com/kfc.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:32 GMT
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Madison%20Bicycle%20Shop
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:54:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "error": {
+            "type": "unknown_record",
+            "message": "Unknown company."
+          }
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:54:33 GMT
+recorded_with: VCR 4.0.0

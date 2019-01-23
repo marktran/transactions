@@ -1,0 +1,29 @@
+.pa4
+  h2.mv2.f4.fw5 Transactions (#{@transactions.count})
+  table.w-100.center.collapse.ba.b--black-10.pv2.ph3
+    - if @transactions.count > 0
+      thead
+        tr.stripe-dark
+          th.pv2.ph3.f6.fw6.tl.bg-white Date
+          th.pv2.ph3.f6.fw6.tl.bg-white Description
+          th.pv2.ph3.f6.fw6.tl.bg-white Amount
+          th.pv2.ph3.f6.fw6.tl.bg-white Recurring
+    tbody.lh-copy
+      - if @transactions.count > 0
+        - @transactions.each do |transaction|
+          tr.stripe-dark
+            td.pv2.ph3= transaction.date
+            td.pv2.ph3= transaction.description
+            td.pv2.ph3 #{'$%.2f' % transaction.amount}
+            td.pv2.ph3= transaction.pending
+      - else
+        tr
+          td.tc.pv3 colspan='3'
+            div No transaction imported
+            div.mt2
+              a#plaid-link.f6.link.dim.ph3.pv2.mb2.dib.white.bg-dark-green href='#'
+                | Import via Plaid
+
+script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'
+script src='https://cdn.plaid.com/link/v2/stable/link-initialize.js'
+script src='js/plaid.js'

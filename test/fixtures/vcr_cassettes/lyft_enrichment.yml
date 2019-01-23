@@ -1,0 +1,155 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=lyft.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 22 Jan 2019 02:08:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "347af314-7c43-46f7-b97b-a10fdb7eb34b",
+          "name": "Lyft",
+          "legalName": "Lyft Inc.",
+          "domain": "lyft.com",
+          "domainAliases": [
+            "lyft.me",
+            "lyft.ca",
+            "lyft.discount",
+            "lft.to"
+          ],
+          "site": {
+            "phoneNumbers": [
+              "+1 800-778-7879",
+              "+1 800-342-3736",
+              "+1 800-894-9444"
+            ],
+            "emailAddresses": [
+              "arbitrationoptout@lyft.com"
+            ]
+          },
+          "category": {
+            "sector": "Consumer Discretionary",
+            "industryGroup": "Consumer Services",
+            "industry": "Diversified Consumer Services",
+            "subIndustry": "Specialized Consumer Services",
+            "sicCode": null,
+            "naicsCode": "54"
+          },
+          "tags": [
+            "Mobile",
+            "B2C",
+            "Marketplace",
+            "Services"
+          ],
+          "description": "Lyft is an on-demand transportation company based in San Francisco, California.",
+          "foundedYear": 2012,
+          "location": "San Francisco State University, Creative Arts, 1600 Holloway Ave, San Francisco, CA 94132, USA",
+          "timeZone": "America/Los_Angeles",
+          "utcOffset": -8,
+          "geo": {
+            "streetNumber": "1600",
+            "streetName": "Holloway Avenue",
+            "subPremise": null,
+            "city": "San Francisco",
+            "postalCode": "94132",
+            "state": "California",
+            "stateCode": "CA",
+            "country": "United States",
+            "countryCode": "US",
+            "lat": 37.7214966,
+            "lng": -122.479805
+          },
+          "logo": "https://logo.clearbit.com/lyft.com",
+          "facebook": {
+            "handle": "lyft",
+            "likes": 500991
+          },
+          "linkedin": {
+            "handle": "company/lyft"
+          },
+          "twitter": {
+            "handle": "lyft",
+            "id": "569569550",
+            "bio": "Download for rides in minutes. For support, we're happy to help over at @AskLyft.",
+            "followers": 277404,
+            "following": 37723,
+            "location": "",
+            "site": "https://t.co/SeMIQoiX0t",
+            "avatar": "https://pbs.twimg.com/profile_images/1063591416918552576/lg72DZIS_normal.jpg"
+          },
+          "crunchbase": {
+            "handle": "organization/lyft"
+          },
+          "emailProvider": false,
+          "type": "private",
+          "ticker": null,
+          "identifiers": {
+            "usEIN": "208809830"
+          },
+          "phone": "+1 415-230-2905",
+          "metrics": {
+            "alexaUsRank": 1293,
+            "alexaGlobalRank": 7193,
+            "employees": 3650,
+            "employeesRange": "1K-5K",
+            "marketCap": null,
+            "raised": 4900000000,
+            "annualRevenue": 1000000000,
+            "estimatedAnnualRevenue": "$500M-$1B",
+            "fiscalYearEnd": null
+          },
+          "indexedAt": "2019-01-11T01:34:19.038Z",
+          "tech": [
+            "zendesk",
+            "mailchimp",
+            "google_apps",
+            "google_tag_manager",
+            "aws_route_53",
+            "mailgun",
+            "amazon_ses",
+            "amazon_s3",
+            "youtube",
+            "slack",
+            "facebook_advertiser",
+            "google_analytics"
+          ],
+          "parent": {
+            "domain": null
+          }
+        }
+    http_version: 
+  recorded_at: Tue, 22 Jan 2019 02:08:15 GMT
+recorded_with: VCR 4.0.0

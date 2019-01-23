@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://company.clearbit.com/v1/domains/find?name=Uber
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:42:47 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=2592000
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "name": "Uber",
+          "domain": "uber.com",
+          "logo": "https://logo.clearbit.com/uber.com"
+        }
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:42:47 GMT
+- request:
+    method: get
+    uri: https://company-stream.clearbit.com/v2/companies/find?domain=uber.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer sk_5a2085a8758417b428794864cd15c0ef
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Jan 2019 05:42:47 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Api-Version:
+      - '2017-09-12'
+      X-Account-Id:
+      - f5ce8018-0790-4283-9c9b-676a080f7b4d
+      Vary:
+      - Accept-Encoding
+      Server:
+      - envoy
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJpZCI6ICIzZjVkNmE0ZS1jMjg0LTRmNzgtYmZkZi03NjY5YjQ1YWY5MDciLAogICJuYW1lIjogIlViZXIiLAogICJsZWdhbE5hbWUiOiAiVWJlciBUZWNobm9sb2dpZXMgSW5jLiIsCiAgImRvbWFpbiI6ICJ1YmVyLmNvbSIsCiAgImRvbWFpbkFsaWFzZXMiOiBbCiAgICAidWJlcm11ZXZlbWFkcmlkLmVzIiwKICAgICJ1YmVyZmFjdHVyYXMuY29tIiwKICAgICJzb2Npb3NtdHkuY29tIiwKICAgICJ1YmVyLWNlbnRyYWwuY29tIiwKICAgICJjb25kdWN0b3Jlc2JvZ290YS5pbmZvIiwKICAgICJlYXRzLm14IgogIF0sCiAgInNpdGUiOiB7CiAgICAicGhvbmVOdW1iZXJzIjogWwoKICAgIF0sCiAgICAiZW1haWxBZGRyZXNzZXMiOiBbCgogICAgXQogIH0sCiAgImNhdGVnb3J5IjogewogICAgInNlY3RvciI6ICJJbmR1c3RyaWFscyIsCiAgICAiaW5kdXN0cnlHcm91cCI6ICJUcmFuc3BvcnRhdGlvbiIsCiAgICAiaW5kdXN0cnkiOiAiVHJhbnNwb3J0YXRpb24iLAogICAgInN1YkluZHVzdHJ5IjogIlRyYW5zcG9ydGF0aW9uIiwKICAgICJzaWNDb2RlIjogIjg3IiwKICAgICJuYWljc0NvZGUiOiAiNTEiCiAgfSwKICAidGFncyI6IFsKICAgICJUcmFuc3BvcnRhdGlvbiIsCiAgICAiTW9iaWxlIiwKICAgICJCMkMiLAogICAgIlRlY2hub2xvZ3kiLAogICAgIk1hcmtldHBsYWNlIiwKICAgICJJbnRlcm5ldCIKICBdLAogICJkZXNjcmlwdGlvbiI6ICJUaGFua3MgZm9yIHZpc2l0aW5nIHRoZSBVYmVyIEZhY2Vib29rIHBhZ2UhIEJ5IHVzaW5nIG9yIGFjY2Vzc2luZyBvdXIgRmFjZWJvb2sgcGFnZSwgeW91IGFncmVlIHRvIGNvbXBseSB3aXRoIEZhY2Vib29rJ3MgU3RhdGVtZW50IG9mIFJpZ2h0cyBhbmQgUmVzcG9uc2liaWxpdGllcy4gQXMgYWx3YXlzLCB0aGUgY29udGVudCBwb3N0ZWQgYnkgZmFucyBvZiBVYmVyJ3MgRmFjZWJvb2sgcGFnZSBkb2VzIG5vdCByZWZsZWN0IFViZXLigJlzIHZpZS4uLiIsCiAgImZvdW5kZWRZZWFyIjogMjAwOSwKICAibG9jYXRpb24iOiAiMTQ1NSBNYXJrZXQgU3QsIFNhbiBGcmFuY2lzY28sIENBIDk0MTAzLCBVU0EiLAogICJ0aW1lWm9uZSI6ICJBbWVyaWNhL0xvc19BbmdlbGVzIiwKICAidXRjT2Zmc2V0IjogLTgsCiAgImdlbyI6IHsKICAgICJzdHJlZXROdW1iZXIiOiAiMTQ1NSIsCiAgICAic3RyZWV0TmFtZSI6ICJNYXJrZXQgU3RyZWV0IiwKICAgICJzdWJQcmVtaXNlIjogbnVsbCwKICAgICJjaXR5IjogIlNhbiBGcmFuY2lzY28iLAogICAgInBvc3RhbENvZGUiOiAiOTQxMDMiLAogICAgInN0YXRlIjogIkNhbGlmb3JuaWEiLAogICAgInN0YXRlQ29kZSI6ICJDQSIsCiAgICAiY291bnRyeSI6ICJVbml0ZWQgU3RhdGVzIiwKICAgICJjb3VudHJ5Q29kZSI6ICJVUyIsCiAgICAibGF0IjogMzcuNzc1NzkxNCwKICAgICJsbmciOiAtMTIyLjQxODA1MjkKICB9LAogICJsb2dvIjogImh0dHBzOi8vbG9nby5jbGVhcmJpdC5jb20vdWJlci5jb20iLAogICJmYWNlYm9vayI6IHsKICAgICJoYW5kbGUiOiAidWJlciIsCiAgICAibGlrZXMiOiAxMzc5Mzc0NwogIH0sCiAgImxpbmtlZGluIjogewogICAgImhhbmRsZSI6ICJjb21wYW55L3ViZXItY29tIgogIH0sCiAgInR3aXR0ZXIiOiB7CiAgICAiaGFuZGxlIjogIlViZXIiLAogICAgImlkIjogIjE5MTAzNDgxIiwKICAgICJiaW8iOiAiSGVscGluZyBtaWxsaW9ucyBvZiBwZW9wbGUgbW92ZSB0b3dhcmRzIG9wcG9ydHVuaXR5IGV2ZXJ5IGRheSBpbiBvdmVyIDYwMCBjaXRpZXMgYXJvdW5kIHRoZSB3b3JsZC5cblxuSGF2ZSBhIHJlcXVlc3Q/IFNlZSBAVWJlcl9TdXBwb3J0LlxuXG4jRG9vcnNBcmVBbHdheXNPcGVuaW5nIiwKICAgICJmb2xsb3dlcnMiOiA5NjYxOTksCiAgICAiZm9sbG93aW5nIjogMzc5LAogICAgImxvY2F0aW9uIjogIkdsb2JhbCIsCiAgICAic2l0ZSI6ICJodHRwczovL3QuY28vQkthcHZkTFZGdiIsCiAgICAiYXZhdGFyIjogImh0dHBzOi8vcGJzLnR3aW1nLmNvbS9wcm9maWxlX2ltYWdlcy8xMDQ1NzgzMTAyMDAwMjMwNDAwL1RQTExhcVlSX25vcm1hbC5qcGciCiAgfSwKICAiY3J1bmNoYmFzZSI6IHsKICAgICJoYW5kbGUiOiAib3JnYW5pemF0aW9uL3ViZXIiCiAgfSwKICAiZW1haWxQcm92aWRlciI6IGZhbHNlLAogICJ0eXBlIjogInByaXZhdGUiLAogICJ0aWNrZXIiOiBudWxsLAogICJpZGVudGlmaWVycyI6IHsKICAgICJ1c0VJTiI6ICI0NTI2NDc0NDEiCiAgfSwKICAicGhvbmUiOiAiKzEgNDE1LTk4Ni0yMTA0IiwKICAibWV0cmljcyI6IHsKICAgICJhbGV4YVVzUmFuayI6IDU4NSwKICAgICJhbGV4YUdsb2JhbFJhbmsiOiAxMTUxLAogICAgImVtcGxveWVlcyI6IDEyMDAwLAogICAgImVtcGxveWVlc1JhbmdlIjogIjEwSy01MEsiLAogICAgIm1hcmtldENhcCI6IG51bGwsCiAgICAicmFpc2VkIjogbnVsbCwKICAgICJhbm51YWxSZXZlbnVlIjogNjUwMDAwMDAwMCwKICAgICJlc3RpbWF0ZWRBbm51YWxSZXZlbnVlIjogIiQxQi0kMTBCIiwKICAgICJmaXNjYWxZZWFyRW5kIjogMTIKICB9LAogICJpbmRleGVkQXQiOiAiMjAxOS0wMS0xOFQwMTozMjoyOS43MThaIiwKICAidGVjaCI6IFsKICAgICJvcHRpbWl6ZWx5IiwKICAgICJnb29nbGVfdGFnX21hbmFnZXIiLAogICAgImZhY2Vib29rX2FkdmVydGlzZXIiLAogICAgInRlYWxpdW0iLAogICAgImhvdGphciIsCiAgICAiZ29vZ2xlX2FuYWx5dGljcyIKICBdLAogICJwYXJlbnQiOiB7CiAgICAiZG9tYWluIjogbnVsbAogIH0KfQ==
+    http_version: 
+  recorded_at: Wed, 23 Jan 2019 05:42:47 GMT
+recorded_with: VCR 4.0.0
