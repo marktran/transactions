@@ -26,8 +26,9 @@
                 article.relative.center.bg-white.mv3.ba.b--black-10.w-30
                   .absolute.top-0.right-0.white.bg-dark-gray.w2.pvs.tc.mt1.mr1 data-action='click->detail#hide' X
                   - if transaction.company
-                    .tc
-                      img.br-100.h3.w3.dib.mt3 src=transaction.company.logo_url
+                    - if transaction.company.logo_url
+                      .tc
+                        img.br-100.h3.w3.dib.mt3 src=transaction.company.logo_url
 
                     dl.lh-title.pa4.mt0
                       dt.f6.b Name
