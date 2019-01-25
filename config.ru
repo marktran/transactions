@@ -2,5 +2,4 @@
 
 require_relative './config/environment'
 
-map('/') { run RootController }
-map('/plaid') { run PlaidController }
+map('/') { run ApplicationController }
