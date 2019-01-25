@@ -16,7 +16,7 @@ This app fetches [test] transactions from Plaid's sandbox environment, enriches 
 1. `env RACK_ENV=test bundle exec rake db:migrate`
 2. `bundle exec rake test`
 
-## Tech stack
+## Stack
 - Sinatra
 - [Sequal](https://sequel.jeremyevans.net)
 - SQLite
