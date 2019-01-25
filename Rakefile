@@ -2,13 +2,15 @@
 
 require 'rake/testtask'
 require 'dotenv'
-Dotenv.load '.env'
 
 case ENV['RACK_ENV']
 when 'test'
-  Dotenv.load '.env.test'
+  Dotenv.load '.env.test', '.env'
+when 'development'
+  Dotenv.load '.env.development', '.env'
 else
-  Dotenv.load '.env.development'
+  puts 'Error: no environment specified (`env RACK_ENV=`)'
+  return false
 end
 
 namespace :db do
