@@ -19,4 +19,5 @@ This app fetches [test] transactions from Plaid's sandbox environment, enriches 
 - SQLite
 - [Slim Templates](http://slim-lang.com)
 - [Stimulus JS](https://stimulusjs.org)
+- [Tachyons](https://tachyons.io)
 - MiniTest
