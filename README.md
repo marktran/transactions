@@ -3,6 +3,9 @@
 ## Overview
 This app fetches [test] transactions from Plaid's sandbox environment, enriches the company data using [Clearbit](https://clearbit.com), and provides a UI for viewing the transactions
 
+![Screenshot](https://mrktrn.com/scrnshts/s20192401-224212.249527157.png)
+![Screenshot](https://mrktrn.com/scrnshts/s20192401-224330.944236887.png)
+
 ## Getting started
 1. `cp .env.example .env` then fill in vars in `.env`
 2. `env RACK_ENV=development bundle exec rake db:migrate`
