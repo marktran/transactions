@@ -17,7 +17,6 @@ class Plaid::ImportTransactions < Plaid::Base
   def call
     fetch_data
     import_data
-    attach_companies
   end
 
   def fetch_data
@@ -43,11 +42,6 @@ class Plaid::ImportTransactions < Plaid::Base
       )
 
       transactions << transaction
-    end
-  end
-
-  def attach_companies
-    transactions.each do |transaction|
       Transaction::AttachCompany.for(transaction).call
     end
   end
