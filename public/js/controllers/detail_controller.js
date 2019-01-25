@@ -11,5 +11,9 @@
     hide() {
       this.cardTarget.style.display = 'none';
     }
+
+    stop(event) {
+      event.stopPropagation();
+    }
   })
 })();

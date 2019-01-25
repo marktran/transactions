@@ -22,8 +22,8 @@
                   | &check;
             td.pv2.ph3 data-controller='detail'
               a.f6.link.dim.ph2.dib.ba.bw1.black href='#' data-action='click->detail#show' Details
-              .overlay.detail.top-0.right-0.bottom-0.left-0.w-100.h-100.fixed data-target='detail.card'
-                article.relative.center.bg-white.mv3.ba.b--black-10.w-30
+              .overlay.detail.top-0.right-0.bottom-0.left-0.w-100.h-100.fixed data-target='detail.card' data-action='click->detail#hide'
+                article.relative.center.bg-white.mv3.ba.b--black-10.w-30 data-action='click->detail#stop'
                   .absolute.top-0.right-0.white.bg-dark-gray.w2.pvs.tc.mt1.mr1 data-action='click->detail#hide' X
                   - if transaction.company
                     - if transaction.company.logo_url
