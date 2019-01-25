@@ -17,4 +17,3 @@ end
 Sequel.connect ENV['DATABASE_URL']
 
 require_all 'config/initializers'
-require_all 'app'
