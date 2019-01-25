@@ -8,6 +8,7 @@
           th.pv2.ph3.f6.fw6.tl.bg-white Description
           th.pv2.ph3.f6.fw6.tl.bg-white Amount
           th.pv2.ph3.f6.fw6.tl.bg-white Recurring
+          th.pv2.ph3.f6.fw6.tl.bg-white
     tbody.lh-copy
       - if @transactions.count > 0
         - @transactions.each do |transaction|
@@ -15,15 +16,58 @@
             td.pv2.ph3= transaction.date
             td.pv2.ph3= transaction.description
             td.pv2.ph3 #{'$%.2f' % transaction.amount}
-            td.pv2.ph3= transaction.recurring
+            td.pv2.ph3
+              - if transaction.recurring
+                span.pl3
+                  | &check;
+            td.pv2.ph3 data-controller='detail'
+              a.f6.link.dim.ph2.dib.ba.bw1.black href='#' data-action='click->detail#show' Details
+              .overlay.detail.top-0.right-0.bottom-0.left-0.w-100.h-100.fixed data-target='detail.card'
+                article.relative.center.bg-white.mv3.ba.b--black-10.w-30
+                  .absolute.top-0.right-0.white.bg-dark-gray.w2.pvs.tc data-action='click->detail#hide' X
+                  - if transaction.company
+                    .tc
+                      img.br-100.h3.w3.dib.mt3 src=transaction.company.logo_url
+
+                    dl.lh-title.pa4.mt0
+                      dt.f6.b Name
+                      dd.ml0
+                        = transaction.company.name
+                        - if transaction.company.legal_name
+                          |  (#{transaction.company.legal_name})
+                      dt.f6.b.mt2 Description
+                      dd.ml0= transaction.company.description
+                      dt.f6.b.mt2 Location
+                      dd.ml0= transaction.company.location
+                      dt.f6.b.mt2 Type
+                      dd.ml0= transaction.company.industry
+                      dt.f6.b.mt2 Type
+                      dd.ml0= transaction.company.type
+                      dt.f6.b.mt2 Facebook
+                      dd.ml0
+                        a href=transaction.company.facebook_url
+                          = transaction.company.facebook_url
+                      dt.f6.b.mt2 Twitter
+                      dd.ml0
+                        a href=transaction.company.twitter_url
+                          = transaction.company.twitter_url
+                  - else
+                    .tc.pa4.mt0
+                      | No company information found
       - else
-        tr
-          td.tc.pv3 colspan='3'
+        tr data-plaid-importing='false' data-controller='plaid'
+          td.tc.pv3.importing-transactions colspan='3'
+            div Importing transactions...
+            div.loader
+          td.tc.pv3.no-transactions colspan='3'
             div No transaction imported
             div.mt2
-              a#plaid-link.f6.link.dim.ph3.pv2.mb2.dib.white.bg-dark-green href='#'
+              a#plaid-link.f6.link.dim.ph3.pv2.mb2.dib.white.bg-dark-green data-action='click->plaid#link'
                 | Import via Plaid
 
 script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js'
 script src='https://cdn.plaid.com/link/v2/stable/link-initialize.js'
-script src='js/plaid.js'
+
+script src='https://unpkg.com/stimulus/dist/stimulus.umd.js'
+script src='js/controllers/plaid_controller.js'
+script src='js/controllers/detail_controller.js'
